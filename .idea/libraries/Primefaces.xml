@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Primefaces" type="jsf-primefaces">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/Library_war_exploded/WEB-INF/lib/primefaces-6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -65,5 +65,6 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.2.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="org.primefaces:primefaces:6.1" level="project" />
+    <orderEntry type="library" name="Primefaces" level="project" />
   </component>
 </module>

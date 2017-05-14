@@ -4,6 +4,12 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
 
     <!--перенаправляем поток на страницу main-->
-    <view-state id="main"/>
+    <view-state id="main">
+        <!--запуск тестового метода-->
+        <on-render>
+            <evaluate expression="testBean.test()"/>
+        </on-render>
+        
+    </view-state>
 
 </flow>

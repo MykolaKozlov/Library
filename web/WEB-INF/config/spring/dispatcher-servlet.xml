@@ -2,11 +2,17 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        ">
 
     <import resource="webflow.xml"/>
+
+    <!--сканирование пакетов на бины Autowire-->
+    <context:component-scan base-package="org.beans"/>
+
 
     <mvc:resources location="/" mapping="/resources/**"/>
 
@@ -21,7 +27,6 @@
     </bean>
 
 
-
     <!--описание представлений View-->
     <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass" value="org.springframework.faces.mvc.JsfView"/>
@@ -32,14 +37,25 @@
 
     <!--бин локализации-->
     <bean id="msg" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <property name="basename" value="/WEB-INF/locales/messages" />
-        <property name="defaultEncoding" value="UTF-8" />
+        <property name="basename" value="/WEB-INF/locales/messages"/>
+        <property name="defaultEncoding" value="UTF-8"/>
     </bean>
 
     <!--язык по дефолту, без него язык будет братся с браузера-->
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
-        <property name="defaultLocale" value="ru" />
+        <property name="defaultLocale" value="ru"/>
     </bean>
 
+    <!--Сессия HIBERNATE-->
+    <!--соединение с БД через GlassFish -->
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="jdbv/Library"/>
+    </bean>
+
+    <!--создаем сессию на основе определенных настроек dataSource-->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+    </bean>
 
 </beans>

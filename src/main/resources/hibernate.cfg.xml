@@ -5,7 +5,7 @@
 <hibernate-configuration>
   <session-factory>
     <!--диалект с которым работаем-->
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
     <!--показ выполняемых запросов в дебаг режиме-->
     <property name="hibernate.show_sql">true</property>
     <!--в каком контексте работать сессии hibernate-->

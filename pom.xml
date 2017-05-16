@@ -15,7 +15,8 @@
         <slf4j-version>1.7.25</slf4j-version>
         <mojarra-version>2.2.10</mojarra-version>
         <primefaces-version>6.1</primefaces-version>
-        <hibernate-version>5.2.10.Final</hibernate-version>
+        <!--5.2.10.Final-->
+        <hibernate-version>4.3.11.Final</hibernate-version>
         <mysql-version>6.0.6</mysql-version>
     </properties>
 

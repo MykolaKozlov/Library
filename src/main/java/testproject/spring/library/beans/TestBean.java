@@ -1,4 +1,4 @@
-package org.beans;
+package testproject.spring.library.beans;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ public class TestBean {
     @Autowired
     private SessionFactory sessionFactory;
 
-    public void test () {
+    public void test() {
         System.out.println("sessionFactory = " + sessionFactory);
     }
 }

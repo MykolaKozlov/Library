@@ -1,10 +1,7 @@
-package org.entities;
+package testproject.spring.library.entities;
 
 import java.util.Arrays;
 
-/**
- * Created by mykol on 11.05.2017.
- */
 public class Book {
     private long id;
     private String name;

@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="org.entities.Vote" table="vote" schema="spring-library">
+    <class name="testproject.spring.library.entities.Vote" table="vote" schema="spring-library">
         <id name="id" column="id"/>
         <property name="value" column="value"/>
         <property name="bookId" column="book_id"/>

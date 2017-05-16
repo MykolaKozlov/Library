@@ -11,7 +11,7 @@
     <import resource="webflow.xml"/>
 
     <!--сканирование пакетов на бины Autowire-->
-    <context:component-scan base-package="org.beans"/>
+    <context:component-scan base-package="testproject.spring.library"/>
 
 
     <mvc:resources location="/" mapping="/resources/**"/>
@@ -47,15 +47,22 @@
     </bean>
 
     <!--Сессия HIBERNATE-->
-    <!--соединение с БД через GlassFish -->
+    <!--соединение hibernate с БД через GlassFish -->
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-        <property name="jndiName" value="jdbv/Library"/>
+        <property name="jndiName" value="jdbc/Library"/>
     </bean>
 
     <!--создаем сессию на основе определенных настроек dataSource-->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
+        <!--<property name="configLocation" value="classpath:hibernate.cfg.xml"/>-->
+        <property name="packagesToScan" value="testproject.spring.library.entities"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
     </bean>
 
 </beans>

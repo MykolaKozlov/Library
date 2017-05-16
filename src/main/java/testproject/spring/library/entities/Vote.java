@@ -1,8 +1,5 @@
-package org.entities;
+package testproject.spring.library.entities;
 
-/**
- * Created by mykol on 11.05.2017.
- */
 public class Vote {
     private long id;
     private Integer value;

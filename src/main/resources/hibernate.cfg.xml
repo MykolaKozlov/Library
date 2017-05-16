@@ -9,17 +9,17 @@
     <!--показ выполняемых запросов в дебаг режиме-->
     <property name="hibernate.show_sql">true</property>
     <!--в каком контексте работать сессии hibernate-->
-    <property name="hibernate.current_session_context_class">thread</property>
+    <!--<property name="hibernate.current_session_context_class">thread</property>-->
     <!--можно обойтись без явного указания datasource-->
-    <property name="hibernate.connection.datasource">jdbc/Library</property>
+    <!--<property name="hibernate.connection.datasource">jdbc/Library</property>-->
     <!--имя БД-->
-    <property name="hibernate.connection.username">root</property>
+    <!--<property name="hibernate.connection.username">root</property>-->
     <!--пароль к БД-->
-    <property name="hibernate.connection.password">root</property>
+    <!--<property name="hibernate.connection.password">root</property>-->
 
 
-    <property name="connection.url">jdbc:mysql://localhost:3306/spring-library</property>
-    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!--<property name="connection.url">jdbc:mysql://localhost:3306/library</property>-->
+    <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
     <mapping resource="testproject/spring/library/entities/Author.hbm.xml"/>
     <mapping resource="testproject/spring/library/entities/Book.hbm.xml"/>
     <mapping resource="testproject/spring/library/entities/Genre.hbm.xml"/>

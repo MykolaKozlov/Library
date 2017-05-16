@@ -7,7 +7,7 @@
     <view-state id="main">
         <!--запуск тестового метода-->
         <on-render>
-            <evaluate expression="testBean.test()"/>
+            <evaluate expression="bookDAOImpl.books"/>
         </on-render>
         
     </view-state>

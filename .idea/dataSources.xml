@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MySQL - spring-library@localhost" uuid="b56a4e7e-105f-4c03-9d25-40fcea06985a">
+    <data-source source="LOCAL" name="MySQL - library@localhost" uuid="0d7e7ddf-b4e3-4835-94f8-8aec1d23f68e">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/spring-library</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/library</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

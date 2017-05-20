@@ -16,6 +16,9 @@ public class Book {
     private String descr;
     private Integer rating;
     private Long voteCount;
+    private Author author;
+    private Genre genre;
+    private Publisher publisher;
 
     public long getId() {
         return id;
@@ -119,6 +122,30 @@ public class Book {
 
     public void setVoteCount(Long voteCount) {
         this.voteCount = voteCount;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     @Override
